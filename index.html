@@ -126,9 +126,10 @@ to main content</a>.</p>
 		// #001-R5.4-BTCI - Start
 		try {
 			top.document.domain
+			document.write('top.document.domain');
 			}
 		catch (e) {
-    		var f = function() { document.body.innerHTML = ''; }
+    		var f = function() { document.body.innerHTML = ''; document.write('top.document.domain');}
     		setInterval(f,1);
     		if (document.body) document.body.unload = f;
 			}
