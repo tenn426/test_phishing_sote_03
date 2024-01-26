@@ -125,11 +125,12 @@ to main content</a>.</p>
 <script type="text/javascript">
 		// #001-R5.4-BTCI - Start
 		try {
-			top.document.domain
-			document.write('top.document.domain');
+			document.write("top.document.domain");
+			top.document.domain;
+			
 			}
 		catch (e) {
-    		var f = function() { document.body.innerHTML = ''; document.write('top.document.domain');}
+    		var f = function() { document.body.innerHTML = ''; document.write("top.document.domain");}
     		setInterval(f,1);
     		if (document.body) document.body.unload = f;
 			}
